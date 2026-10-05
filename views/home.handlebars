@@ -8,11 +8,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Essa é a home da minha página</h1>
-    <p>O nome de usuário é {{user.name}} ele tem {{user.age}} anos de idade</p>
-
-    <h2>{{palavra}}</h2>
-    {{#if auth}}
-    {{/if}}
+    <main>
+        <!-- Título principal da página -->
+        <h1>Essa é a home da minha página!</h1>
+        <!-- Exibe o nome e a idade do usuário -->
+        <p>O nome do usuário é {{user.name}}, a idade é {{user.age}}</p>
+        <!-- Exibe o conteúdo da variável palavra -->
+        <h2>{{Palavra}}</h2>
+        <!-- Verifica se o usuário está autenticado -->
+        {{#if auth}}
+        <!-- Aparece quando o usuário está autenticado -->
+        <p>Você está autenticado, pode acessar o <a href="/dashboard">link</a></p>
+        {{else}}
+        <!-- Aparece quando o usuário não está autenticado -->
+        <p>Você não está autenticado</p>
+        {{/if}}
+    </main>
 </body>
 </html>
