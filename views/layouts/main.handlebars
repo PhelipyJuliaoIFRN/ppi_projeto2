@@ -1,19 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
+    <!--
+    Cabeçalho principal da aplicação.
+    Essa parte fica presente em todas as páginas que utilizarem este layout.
+    -->
     <header>
+        <!-- Área destinada à navegação do site -->
         <nav>
+            <!-- Texto que representa a barra de navegação -->
             <p>Barra de navegação</p>
         </nav>
+    <!--
+    Local onde o conteúdo das outras páginas será inserido. O {{{body}}}
+    é um recurso do Handlebars que recebe e exibe o conteúdo da página que está sendo acessada.
+    Dessa forma, não precisamos repetir o HTML do cabeçalho e do rodapé em todas as páginas.
+    -->
     </header>
-    <main>
-        {{{body}}}
-    </main>
+    {{{body}}}
+    <!--
+    Rodapé da aplicação. Assim como o cabeçalho,
+    ele pode ser reutilizado em todas as páginas que utilizarem este layout.
+    -->
     <footer>
         <p>Rodapé da aplicação</p>
     </footer>
