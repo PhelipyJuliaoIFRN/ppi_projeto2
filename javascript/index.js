@@ -10,6 +10,8 @@ const port = 3000
 app.engine('handlebars', exphbs.engine())
 // Define o Handlebars como view engine do projeto
 app.set('view engine', 'handlebars')
+//Adiciona o CSS presente na pasta public
+app.use(express.static('public'))
 
 // Cria uma rota para a página inicial "/"
 app.get('/', (req, res)=>{
@@ -25,6 +27,11 @@ app.get('/', (req, res)=>{
     const auth = true
     // Renderiza a página home e envia os dados para ela
     res.render('home', {user, palavra, auth})
+})
+
+app.get('/dashboard', (req, res)=>{
+    const produtos = ['Produto A', 'produto B', 'Produto C']
+    res.render('dashboard', {produtos})
 })
 
 // Inicia o servidor na porta definida
